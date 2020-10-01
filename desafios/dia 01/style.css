@@ -1,0 +1,101 @@
+body {
+  margin: 0; /* ajuste de página, nesse projeto não faz muuuuita diferença*/
+  padding: 0; /* ajuste de página, lembrando que o padding é o espaço até a borda*/
+  height: 100vh; /* é um valor padrão p/ ocupar toda altura da página */
+  display: flex; /* ocupa toda área disponível na página, sem ele as logos ficariam la em cima*/
+  align-items: center; /*alinha os itens no eixo Y */
+  justify-content: center; /* alinha os itens no eixo X*/
+}
+
+ul {
+  position: relative; /* o grupo vai ser orientado pelo canto superior esquerdo do ul */
+  margin: 0;
+  padding: 0;
+  display: flex; /* ocupa toda área disponível para ele */
+}
+
+ul li {
+  position: relative; /*significa que cada item da lista vai ser orientado pela seu próprio canto superior esquerdo */
+  list-style: none; /* para tirar a "bolinha" de cada item - ela vem por padrão */
+  width: 60px; /* aqui estamos nos referindo ao elemento li e não ao seu conteúdo, como no caso os ícones das reces sociais */
+  height: 60px;
+  margin: 0 30px; /* os 30px nas laterais servem para evitar que uma imagem sobreponha a outra */
+  transform: rotate(-30deg) skew(25deg); /* rotate negativo gira o elemento no sentido anti horário mas sem destorcer - o skew ele "deita" o elemento parece que ele ta saindo da página  */
+  background: #ccc; /* poderia ser definido pelo color tambem */ 
+}
+
+ul li span {
+    position: absolute; /* faz com que cada span seja orientado ao cto sup esquerdo do seu elemento apai, nesse caso o li */
+    top: 0; /*significa que o elemento vai estar orientado no canto sup esquerdo */
+    left: 0; /*significa que o elemento vai estar orientado no canto sup esquerdo */
+    width: 100%; /* o elemento vai utilizar 100% da altura disponível, nesse caso 60px definido no pai*/
+    height: 100%; /* o elemento vai utilizar 100% da largura disponível, nesse caso 60px definido no pai*/
+    background: #000;
+    transition: 0.6s;
+    display: flex !important; /*o !important faz com que a logo fique exatamente no centro do elemento*/
+    align-items: center; /*alinhando a logo ao centro no eixo Y */
+    justify-content: center; /*alinhando a logo ao centro no eixo X*/
+    color: rgb(255, 251, 251); /*cor da logo (ou da fonte - o conteudo escrito */
+    font-size: 30px !important; /*fonte da logo*/
+
+    /* o !important ignora qualquer hierarquia do css e prevalece sobre as demais - é a de mais alta prioridade */
+}
+
+/* Visualização das Camadas com hover */
+
+/* ul li:hover span {
+    box-shadow: -2px 3px 3px rgb(29, 49, 49); /*determina a sombra em cada camada*/
+
+ul li:hover span:nth-child(5) { /* referente ao quinto span - filho mais de cima que tem a logo */
+    transform: translate(40px, -40px); /*o primeiro define o deslocamento no eixo X e o segundo no eixo Y*/
+    opacity: 1; /*define a opacidade do elemento*/
+}
+ul li:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+    opacity: 0.8;
+}
+ul li:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+    opacity: 0.6;
+}
+ul li:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+    opacity: 0.4;
+}
+ul li:hover span:nth-child(1) {
+    transform: translate(0,0);
+    opacity: .2;
+}
+
+/* Cores das camadas */
+
+ul li:nth-child(1) span { /*aqui pega o primeiro iten da lista */
+    background: #3b5999;
+    box-shadow: -2px 3px 3px #5e81ccde;
+}
+
+ul li:nth-child(2) span {
+    background: black;
+    box-shadow: -2px 3px 3px #dad5d5de;
+} 
+
+ul li:nth-child(3) span{
+    background: #55acee;
+    box-shadow: -2px 3px 3px #42637c;
+}
+
+ul li:nth-child(4) span {
+    background: #0077b5;
+    box-shadow: -2px 3px 3px #095781;
+}
+
+ul li:nth-child(5) span {
+    background: #bb2f48;
+    box-shadow: -2px 3px 3px #9b152ef1;
+}
+
+ul li:nth-child(6) span {
+    background: #dd4b39;
+    box-shadow: -2px 3px 3px #c73320ea;
+}
+
