@@ -28,4 +28,11 @@ Seguindo minhas inspirações, criei algumas regras pessoais para deixar o desaf
   - Após os 30 dias, me comprometo em escrever um artigo no Medium para compartilhar meus aprendizados, dicas e o que pude extrair como um todo desse desafio.
 
 
+## Desafios:
 
+### Dia 01 - Icones de redes sociais em camadas
+<br/>
+
+<p align="center">
+  <img src="./assets/01.gif" title="Gif de icones das redes sociais">
+</p>
